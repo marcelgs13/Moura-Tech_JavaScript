@@ -1,0 +1,106 @@
+/*ESTRUTURA PRINCIPAL (BODY)*/
+body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ececec;
+}
+
+/*ESTILOS DO CABEÇALHO (HEADER)*/
+header h1 {
+    color: #2b2b2b;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/*ESTILOS DA CALCULADORA*/
+.calculadora {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#visor {
+    background-color: #ffffff;
+    height: 45px;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10px;
+    font-size: 24px;
+    border-radius: 4px;
+    word-break: break-all;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 10px;
+}
+
+button {
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+
+button:hover {
+    background-color: #d1d1d1;
+}
+
+/*ESTILOS DOS BOTÕES ESPECÍFICOS*/
+.op {
+    background-color: #ff9800;
+    color: white;
+}
+
+.op:hover {
+    background-color: #f57c00;
+}
+
+#calc {
+    background-color: #4caf50;
+    color: white;
+    grid-column: span 4; 
+}
+
+#calc:hover {
+    background-color: #388e3c;
+}
+
+#clear {
+    background-color: #f44336;
+    color: white;
+}
+
+#clear:hover {
+    background-color: #d32f2f;
+}
+
+/*ESTILOS DO RODAPÉ (FOOTER)*/
+footer {
+    margin-top: 35px;
+    text-align: center;
+}
+
+footer p {
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 10px 20px;
+    border-top: 2px solid #ccc; 
+}
