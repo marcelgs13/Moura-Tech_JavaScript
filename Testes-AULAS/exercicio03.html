@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 3 Simplificado</title>
+</head>
+<body>
+    <h1>Meu título</h1>
+    <button onclick="mudarTexto()">Altera título</button>
+    <button onclick="mudarCor()">Alterar cor do fundo</button>
+    <script>
+        //usando mouseover e mouseout
+        let titulo = document.querySelector("h1");
+            titulo.addEventListener("mouseover", function() {
+                titulo.style.color = "red";
+            });
+            titulo.addEventListener("mouseout", function() {
+                titulo.style.color = "black";
+            });
+        function mudarTexto() {
+            document.getElementsByTagName("h1")[0].innerHTML = "Alterando Título!";
+        }
+        function mudarCor() {
+            document.body.style.backgroundColor = "green";
+        }
+    </script>
+</body>
+</html>
