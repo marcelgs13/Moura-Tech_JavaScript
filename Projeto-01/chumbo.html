@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes - Chumbo-Ácido | Moura</title>
+    <link rel="icon" href="./imagens/logo-moura.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./imagens/logo-moura.jpeg" alt="Logo da empresa Baterias Moura">
+        <h1>Bateria de Chumbo-Ácido</h1>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Funcionamento</h2>
+
+            <article>
+                <p>
+                    A bateria de chumbo-ácido é composta internamente por placas de chumbo (ânodo e cátodo)
+                    mergulhadas em uma solução eletrolítica.
+                </p>
+
+                <div class="acoes">
+                    <button class="btn-moura" onclick="alert('Atenção: Os principais componentes são o chumbo (metal pesado tóxico) e o ácido sulfúrico (líquido altamente corrosivo). O descarte inadequado causa graves danos ambientais.')">
+                        Ver componentes tóxicos
+                    </button>
+
+                    <button class="btn-moura" onclick="calcularNivelToxico()">
+                        Calcular Nível Tóxico no Sangue
+                    </button>
+                </div>
+
+                <div class="voltar-container">
+                    <a href="index.html" class="btn-moura btn-voltar">
+                        ← Voltar para a página inicial
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>© 2026 - Projeto Acadêmico</p>
+    </footer>
+
+    <script>
+        function calcularNivelToxico() {
+            let litrosSangue = 7;
+            let limiteGramasPorLitro = 10;
+            let limiteTotal = litrosSangue * limiteGramasPorLitro;
+
+            alert('Cálculo de Alerta: Para ' + litrosSangue +
+                ' litros de sangue, a concentração tóxica é atingida com ' +
+                limiteTotal + 'g de chumbo.');
+        }
+    </script>
+</body>
+
+</html>

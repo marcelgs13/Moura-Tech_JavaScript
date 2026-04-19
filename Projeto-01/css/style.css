@@ -1,0 +1,135 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== VARIÁVEIS ===== */
+:root {
+    --azul-moura: #002D72;
+    --azul-escuro: #001a45;
+    --amarelo-moura: #FFC72C;
+    --texto-escuro: #333333;
+    --fundo-claro: #F4F6F9;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--fundo-claro);
+    color: var(--texto-escuro);
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, var(--azul-moura) 0%, var(--azul-escuro) 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid var(--amarelo-moura);
+    margin-bottom: 40px;
+}
+
+header img {
+    max-height: 90px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 5px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ===== CARDS (SECTIONS) ===== */
+section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid var(--azul-moura);
+}
+
+/* ===== TEXTOS ===== */
+h2 {
+    color: var(--azul-moura);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.05rem;
+    color: #555;
+}
+
+strong {
+    color: var(--azul-moura);
+}
+
+/* ===== BOTÕES ===== */
+.btn-moura,
+.ver-componentes {
+    display: inline-block;
+    background-color: var(--amarelo-moura);
+    color: var(--azul-moura);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(255, 199, 44, 0.3);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.btn-moura:hover,
+.ver-componentes:hover {
+    background-color: var(--azul-moura);
+    color: var(--amarelo-moura);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 45, 114, 0.3);
+}
+
+/* ===== ÁREA DE AÇÕES ===== */
+.acoes {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* ===== BOTÃO VOLTAR ===== */
+.voltar-container {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.btn-voltar {
+    background-color: var(--azul-moura);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 45, 114, 0.2);
+}
+
+.btn-voltar:hover {
+    background-color: var(--azul-escuro);
+    color: white;
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Segurança | Moura</title>
+    <link rel="icon" href="../imagens/logo-moura.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="../imagens/logo-moura.jpeg" alt="Logo Baterias Moura">
+        <h1>Verificação de Segurança para Manuseio de Baterias</h1>
+    </header>
+
+    <main class="container">
+
+        <div class="intro-box">
+            <h2>Antes de manusear, verifique!</h2>
+            <p>Responda as perguntas abaixo para saber se você está em condições seguras para operar com baterias. Ao final, o sistema indicará se há alguma recomendação a seguir.</p>
+        </div>
+
+        <form id="form-seguranca" novalidate>
+
+            <fieldset>
+                <legend>1. Qual tipo de bateria você irá manusear?</legend>
+                <p class="legenda-sub">O tipo define os riscos e cuidados específicos.</p>
+
+                <div class="opcao">
+                    <input type="radio" name="tipo" id="tipo-chumbo" value="chumbo" required>
+                    <label for="tipo-chumbo">
+                        <span class="opcao-emoji">🔋</span>
+                        <span>
+                            <span class="opcao-label">Chumbo-Ácido</span><br>
+                            <span class="opcao-desc">Automotivas, nobreaks, empilhadeiras</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" name="tipo" id="tipo-litio" value="litio">
+                    <label for="tipo-litio">
+                        <span class="opcao-emoji">⚡</span>
+                        <span>
+                            <span class="opcao-label">Lítio (Li-ion / LiFePO4)</span><br>
+                            <span class="opcao-desc">Eletrônicos, veículos elétricos</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" name="tipo" id="tipo-outro" value="outro">
+                    <label for="tipo-outro">
+                        <span class="opcao-emoji">🔌</span>
+                        <span>
+                            <span class="opcao-label">Outro / Não sei</span><br>
+                            <span class="opcao-desc">Níquel-Metal, AGM ou desconhecido</span>
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>2. Onde o manuseio será realizado?</legend>
+                <p class="legenda-sub">A ventilação é crucial, especialmente para baterias de chumbo-ácido.</p>
+
+                <div class="opcao">
+                    <input type="radio" name="local" id="local-aberto" value="aberto" required>
+                    <label for="local-aberto">
+                        <span class="opcao-emoji">🌿</span>
+                        <span>
+                            <span class="opcao-label">Ambiente externo / aberto</span><br>
+                            <span class="opcao-desc">Área ao ar livre com ventilação natural</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" name="local" id="local-ventilado" value="ventilado">
+                    <label for="local-ventilado">
+                        <span class="opcao-emoji">🏭</span>
+                        <span>
+                            <span class="opcao-label">Ambiente interno ventilado</span><br>
+                            <span class="opcao-desc">Galpão ou oficina com janelas e/ou exaustores</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" name="local" id="local-fechado" value="fechado">
+                    <label for="local-fechado">
+                        <span class="opcao-emoji">🚪</span>
+                        <span>
+                            <span class="opcao-label">Ambiente fechado / sem ventilação</span><br>
+                            <span class="opcao-desc">Sala fechada ou espaço confinado</span>
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Você está utilizando os EPIs corretos?</legend>
+                <p class="legenda-sub">Luvas, óculos de proteção, avental e botina são obrigatórios.</p>
+
+                <div class="opcao">
+                    <input type="radio" name="epi" id="epi-todos" value="todos" required>
+                    <label for="epi-todos">
+                        <span class="opcao-emoji">🦺</span>
+                        <span>
+                            <span class="opcao-label">Sim — todos os EPIs necessários</span><br>
+                            <span class="opcao-desc">Luvas, óculos, avental e calçado de segurança</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" name="epi" id="epi-parcial" value="parcial">
+                    <label for="epi-parcial">
+                        <span class="opcao-emoji">🧤</span>
+                        <span>
+                            <span class="opcao-label">Parcialmente — tenho alguns itens</span><br>
+                            <span class="opcao-desc">Apenas luvas ou apenas óculos, por exemplo</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" name="epi" id="epi-nenhum" value="nenhum">
+                    <label for="epi-nenhum">
+                        <span class="opcao-emoji">❌</span>
+                        <span>
+                            <span class="opcao-label">Não — sem equipamentos de proteção</span><br>
+                            <span class="opcao-desc">Nenhum EPI disponível no momento</span>
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>4. Qual é o estado visual da bateria?</legend>
+                <p class="legenda-sub">Inspecionar antes de manusear é passo obrigatório.</p>
+
+                <div class="opcao">
+                    <input type="radio" name="estado" id="estado-ok" value="ok" required>
+                    <label for="estado-ok">
+                        <span class="opcao-emoji">✅</span>
+                        <span>
+                            <span class="opcao-label">Boa condição</span><br>
+                            <span class="opcao-desc">Sem vazamentos, inchaços, rachaduras ou corrosão</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" name="estado" id="estado-corrosao" value="corrosao">
+                    <label for="estado-corrosao">
+                        <span class="opcao-emoji">⚠️</span>
+                        <span>
+                            <span class="opcao-label">Sinais de corrosão nos terminais</span><br>
+                            <span class="opcao-desc">Oxidação ou depósitos brancos/azulados</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" name="estado" id="estado-danificada" value="danificada">
+                    <label for="estado-danificada">
+                        <span class="opcao-emoji">🚨</span>
+                        <span>
+                            <span class="opcao-label">Danificada — vazamento ou inchada</span><br>
+                            <span class="opcao-desc">Carcaça rachada, eletrólito vazando ou bateria estufada</span>
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>5. Há recursos de emergência disponíveis no local?</legend>
+                <p class="legenda-sub">Extintor, lava-olhos e kit de primeiros socorros são itens obrigatórios.</p>
+
+                <div class="opcao">
+                    <input type="radio" name="emergencia" id="em-completo" value="completo" required>
+                    <label for="em-completo">
+                        <span class="opcao-emoji">🧯</span>
+                        <span>
+                            <span class="opcao-label">Sim — kit completo disponível</span><br>
+                            <span class="opcao-desc">Extintor, lava-olhos, primeiros socorros e bicarbonato</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" name="emergencia" id="em-parcial" value="parcial">
+                    <label for="em-parcial">
+                        <span class="opcao-emoji">🩹</span>
+                        <span>
+                            <span class="opcao-label">Parcialmente — alguns itens disponíveis</span><br>
+                            <span class="opcao-desc">Extintor ou primeiros socorros, mas não ambos</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" name="emergencia" id="em-nenhum" value="nenhum">
+                    <label for="em-nenhum">
+                        <span class="opcao-emoji">🚫</span>
+                        <span>
+                            <span class="opcao-label">Não há recursos de emergência</span><br>
+                            <span class="opcao-desc">Sem extintor, lava-olhos ou primeiros socorros</span>
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="acoes">
+                <button type="submit" class="btn-moura">Ver Resultado</button>
+            </div>
+
+        </form>
+
+        <div id="resultado">
+
+            <div class="resultado-box">
+                <div class="icone" id="res-icone"></div>
+                <div class="badge" id="res-badge"></div>
+                <h2 id="res-titulo"></h2>
+                <p id="res-desc"></p>
+            </div>
+
+            <div class="rec-lista" id="rec-lista" style="display:none">
+                <h3>📋 Recomendações e ações necessárias</h3>
+                <div id="rec-itens"></div>
+            </div>
+
+            <div class="acoes-resultado">
+                <button class="btn-moura" onclick="reiniciar()">🔄 Refazer Verificação</button>
+                <a href="../index.html" class="btn-moura btn-voltar">← Voltar para a Página Inicial</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="container">
+        <p>© 2026 - Projeto Acadêmico</p>
+    </footer>
+
+    <script>
+        const recomendacoes = {
+            local_fechado:      { nivel:'critico', titulo:'Ambiente sem ventilação — risco de explosão e intoxicação',    desc:'Baterias de chumbo-ácido liberam gás hidrogênio (H₂), altamente inflamável. Em espaços fechados a concentração pode atingir o limite de explosividade em minutos. Realize o manuseio em área aberta ou com exaustão ativa.' },
+            local_ventilado:    { nivel:'atencao', titulo:'Ventilação — confirme a eficiência do sistema',                desc:'Ambiente ventilado é aceitável, mas mantenha janelas e exaustores funcionando durante todo o procedimento.' },
+            epi_nenhum:         { nivel:'critico', titulo:'Sem EPI — risco imediato de queimaduras e acidentes',          desc:'É obrigatório: luvas de nitrila ou neoprene, óculos de segurança, avental e calçado fechado. Nunca manipule baterias sem proteção.' },
+            epi_parcial:        { nivel:'atencao', titulo:'EPI incompleto — complete antes de iniciar',                   desc:'O kit mínimo é: luvas, óculos de proteção e calçado fechado. Identifique os itens faltantes e providencie antes de começar.' },
+            estado_danificada:  { nivel:'critico', titulo:'Bateria danificada — não manusear',                            desc:'Bateria com vazamento, rachadura ou inchamento representa risco de explosão e exposição química. Isole a área e acione a equipe de descarte seguro.' },
+            estado_corrosao:    { nivel:'atencao', titulo:'Corrosão nos terminais — cuidado extra necessário',            desc:'Limpe com solução de bicarbonato de sódio (1 colher em 200ml de água) usando pincel e EPI completo. Verifique se não há vazamento de eletrólito.' },
+            emergencia_nenhum:  { nivel:'critico', titulo:'Sem recursos de emergência no local',                          desc:'A ausência de extintor, lava-olhos e kit de primeiros socorros impossibilita atendimento rápido. Em contato com ácido, lave com água abundante por 15 minutos.' },
+            emergencia_parcial: { nivel:'atencao', titulo:'Recursos de emergência incompletos',                           desc:'O mínimo necessário é extintor adequado, água corrente disponível e contato de emergência acessível.' }
+        };
+
+        document.getElementById('form-seguranca').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const f = new FormData(this);
+            const tipo       = f.get('tipo');
+            const local      = f.get('local');
+            const epi        = f.get('epi');
+            const estado     = f.get('estado');
+            const emergencia = f.get('emergencia');
+
+            if (!tipo || !local || !epi || !estado || !emergencia) {
+                alert('Por favor, preencha todos os campos do formulário antes de ver o resultado.');
+                return;
+            }
+
+            const problemas = [];
+
+            if      (local      === 'fechado')    problemas.push(recomendacoes.local_fechado);
+            else if (local      === 'ventilado')  problemas.push(recomendacoes.local_ventilado);
+            if      (epi        === 'nenhum')     problemas.push(recomendacoes.epi_nenhum);
+            else if (epi        === 'parcial')    problemas.push(recomendacoes.epi_parcial);
+            if      (estado     === 'danificada') problemas.push(recomendacoes.estado_danificada);
+            else if (estado     === 'corrosao')   problemas.push(recomendacoes.estado_corrosao);
+            if      (emergencia === 'nenhum')     problemas.push(recomendacoes.emergencia_nenhum);
+            else if (emergencia === 'parcial')    problemas.push(recomendacoes.emergencia_parcial);
+
+            if (tipo === 'chumbo' && local === 'fechado') {
+                problemas.unshift({ nivel:'critico', titulo:'⚠️ Chumbo-Ácido em ambiente fechado — PERIGO EXTREMO', desc:'Esta combinação é extremamente perigosa. O gás hidrogênio emitido pode atingir concentração explosiva em minutos. NÃO prossiga nestas condições.' });
+            }
+
+            const criticos = problemas.filter(p => p.nivel === 'critico').length;
+            const avisos   = problemas.filter(p => p.nivel === 'atencao').length;
+
+            if (criticos > 0) {
+                document.getElementById('res-icone').textContent  = '🚨';
+                document.getElementById('res-badge').textContent  = 'NÃO AUTORIZADO';
+                document.getElementById('res-badge').className    = 'badge badge-perigo';
+                document.getElementById('res-titulo').textContent = 'Condições inseguras identificadas';
+                document.getElementById('res-desc').textContent   = `Foram encontrados ${criticos} ponto(s) crítico(s). Não realize o manuseio até corrigir todas as condições críticas.`;
+            } else if (avisos > 0) {
+                document.getElementById('res-icone').textContent  = '⚠️';
+                document.getElementById('res-badge').textContent  = 'ATENÇÃO NECESSÁRIA';
+                document.getElementById('res-badge').className    = 'badge badge-aviso';
+                document.getElementById('res-titulo').textContent = 'Condições com pontos de melhoria';
+                document.getElementById('res-desc').textContent   = `Sem impedimentos críticos, mas ${avisos} ponto(s) de atenção foram encontrados. Corrija-os antes de iniciar.`;
+            } else {
+                document.getElementById('res-icone').textContent  = '✅';
+                document.getElementById('res-badge').textContent  = 'AUTORIZADO';
+                document.getElementById('res-badge').className    = 'badge badge-ok';
+                document.getElementById('res-titulo').textContent = 'Você está em condições seguras!';
+                document.getElementById('res-desc').textContent   = 'Todas as verificações foram aprovadas. Prossiga seguindo os procedimentos padrão da empresa.';
+            }
+
+            const recLista = document.getElementById('rec-lista');
+            if (problemas.length > 0) {
+                document.getElementById('rec-itens').innerHTML = problemas.map(p => `
+                    <div class="rec-item">
+                        <div class="rec-icone">${p.nivel === 'critico' ? '🚨' : '⚠️'}</div>
+                        <div><strong>${p.titulo}</strong><p>${p.desc}</p></div>
+                    </div>`).join('');
+                recLista.style.display = '';
+            } else {
+                recLista.style.display = 'none';
+            }
+
+            this.style.display = 'none';
+            document.getElementById('resultado').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        function reiniciar() {
+            document.getElementById('form-seguranca').reset();
+            document.getElementById('form-seguranca').style.display = '';
+            document.getElementById('resultado').style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>

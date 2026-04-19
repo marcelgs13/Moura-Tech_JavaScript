@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes - Lítio | Moura</title>
+    <link rel="icon" href="../imagens/logo-moura.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="../imagens/logo-moura.jpeg" alt="Logo da empresa Baterias Moura">
+        <h1>Bateria de Lítio</h1>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Funcionamento</h2>
+
+            <article>
+                <p>
+                    As baterias de íons de lítio funcionam com o movimento de íons de lítio entre os eletrodos através de um meio eletrolítico.
+                </p>
+
+                <div class="acoes">
+                    <button class="btn-moura" onclick="alert('Atenção: Contêm sais de lítio, solventes orgânicos e outros compostos que podem ser tóxicos e altamente inflamáveis se perfurados ou descartados incorretamente.')">
+                        Ver componentes tóxicos
+                    </button>
+
+                    <button class="btn-moura" onclick="calcularNivelToxicoLitio()">
+                        Calcular Nível Tóxico no Sangue
+                    </button>
+                </div>
+
+                <div class="voltar-container">
+                    <a href="../index.html" class="btn-moura btn-voltar">
+                        ← Voltar para a página inicial
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>© 2026 - Projeto Acadêmico</p>
+    </footer>
+
+    <script>
+        function calcularNivelToxicoLitio() {
+            let litrosSangue = 7;
+            let limiteMiligramasPorLitro = 15;
+            let limiteTotal = litrosSangue * limiteMiligramasPorLitro;
+
+            alert('Cálculo de Alerta (Lítio): Para ' + litrosSangue +
+                ' litros de sangue, níveis de toxicidade grave seriam atingidos com ' +
+                limiteTotal + 'mg de lítio circulante.');
+        }
+    </script>
+</body>
+
+</html>
