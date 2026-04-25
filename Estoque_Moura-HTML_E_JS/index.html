@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linha de Produção - Baterias Moura</title>
+    <link rel="icon" href="./imagens/logo-moura.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./imagens/logo-moura.jpeg" alt="Logo Baterias Moura" />
+        <h1>Controle de Estoque</h1>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>1. Registrar Materiais</h2>
+            <form name="cadastroInsumos" class="formulario-estoque">
+                <div class="campo-grupo">
+                    <label>Caixas Plásticas:</label>
+                    <input type="number" name="caixas" value="0" min="0">
+                </div>
+
+                <div class="campo-grupo">
+                    <label>Caixas de Chumbo (100 placas):</label>
+                    <input type="number" name="chumbo" value="0" min="0">
+                </div>
+
+                <div class="campo-grupo">
+                    <label>Ácido (Litros):</label>
+                    <input type="number" name="acido" value="0" min="0" step="0.1">
+                </div>
+
+                <div class="acoes">
+                    <button id="btnRegistrar" class="btn-moura">Registrar no Estoque</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h2>2. Estoque de Materiais</h2>
+            <p><strong>Caixas Plásticas:</strong> <span id="qtdCaixas" class="destaque-numero">0</span></p>
+            <p><strong>Placas de Chumbo:</strong> <span id="qtdChumbo" class="destaque-numero">0</span></p>
+            <p><strong>Ácido (Litros):</strong> <span id="qtdAcido" class="destaque-numero">0</span></p>
+        </section>
+
+        <section>
+            <h2>3. Produção e Produtos Prontos</h2>
+            <div class="acoes">
+                <button id="btnProduzir" class="btn-moura">Produzir Bateria</button>
+                <button id="btnVisualizar" class="btn-moura" style="background-color: var(--azul-moura); color: white;">Visualizar Baterias Disponíveis</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="container" style="text-align: center; margin-top: 20px;">
+        <p>© 2026 - Projeto Acadêmico</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
