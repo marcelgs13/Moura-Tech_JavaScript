@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Servidor Matemático</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="javascript/math_ui.js"></script>
+</head>
+<body>
+
+  <h1>Calculadora Socket.IO</h1>
+
+  <label>Valor 1:</label>
+  <input type="number" id="addend1">
+
+  <br><br>
+
+  <label>Valor 2:</label>
+  <input type="number" id="addend2">
+
+  <br><br>
+
+  <button onclick="somar()">Somar</button>
+
+  <h2 id="resultado"></h2>
+
+</body>
+</html>
