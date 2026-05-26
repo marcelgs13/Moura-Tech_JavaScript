@@ -17,8 +17,22 @@ function handleCommand(socket) {
     socket.emit('daAnswer', message);
   });
 
+  socket.on('daSubtract', function (data) {
+    var val1 = Number(data.addend1);
+    var val2 = Number(data.addend2)
+    console.log('Subtracting ' + val1 + ' - ' + val2);
+    var answer = doDaSubtraction(val1, val2);
+    var message = val1 + ' - ' + val2 + ' = ' + answer;
+    // Build and send reply
+    socket.emit('daAnswer', message);
+  });
+
 };
 function doDaAddition(x, y) {
   return x + y;
+}
+
+function doDaSubtraction(x, y) {
+  return x - y;
 }
 
